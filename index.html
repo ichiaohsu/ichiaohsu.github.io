@@ -1,1 +1,51 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<style>
+	.full-image{
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	</style>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>    
+
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				scrollingSpeed: 1000
+			});
+		});
+	</script>
+
+	</head>
+	<body>
+	<div id="fullpage">
+	    <div class="section fp-auto-height active" id="section0">
+	    	<img src="./images/CAT_9434.jpg" class="full-image"/>
+	    </div>
+	    <div class="section fp-auto-height" id="section1">
+	    	<img src="./images/CAT_9439.jpg" class="full-image"/>
+	    </div>
+	    <div class="section fp-auto-height" id="section2">
+	    	<img src="./images/CAT_9446.jpg" class="full-image"/>
+	    </div>
+	    <div class="section fp-auto-height" id="section3">
+		    <div class="slide" data-anchor="slide1">
+		    	<img src="./images/CAT_9466.jpg" class="full-image"/>
+		    </div>
+	    	<div class="slide" data-anchor="slide2">
+		    	<img src="./images/CAT_9482.jpg" class="full-image"/>
+		    </div>
+	    </div>
+	</div>
+	</body>
+</html>
