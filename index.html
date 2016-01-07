@@ -1,51 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-
+	
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-	<style>
-	.full-image{
-		max-width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
 
-	</style>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>    
-
+	
+	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="jquery.fullPage.js"></script>
-	<script type="text/javascript" src="main.js"></script>
+	<!--<script type="text/javascript" src="main.js"></script> -->
 
 	<script type="text/javascript">
 		$(document).ready(function() {
+			console.log("height:" + $(".navbar").height() + "px");
+			$(".central-white").css({
+				"margin-top": $(".navbar").height() + "px",
+				"margin-bottom": $(".navbar").height() + "px"
+			});
 			$('#fullpage').fullpage({
-				scrollingSpeed: 1000
+				anchors:['1st','2nd','3rd','4th','5th'],
+				scrollingSpeed: 1000,
+				menu: '#menu',
+				verticalCentered: true,
+				responsiveWidth: 800,
+				responsiveHeight: 600,
 			});
 		});
 	</script>
 
 	</head>
 	<body>
-	<div id="fullpage">
-	    <div class="section fp-auto-height active" id="section0">
-	    	<img src="https://farm4.staticflickr.com/3669/11370526283_10f91b93c9_b.jpg" class="full-image"/>
-	    </div>
-	    <div class="section fp-auto-height" id="section1">
-	    	<img src="./images/CAT_9439.jpg" class="full-image"/>
-	    </div>
-	    <div class="section fp-auto-height" id="section2">
-	    	<img src="./images/CAT_9446.jpg" class="full-image"/>
-	    </div>
-	    <div class="section fp-auto-height" id="section3">
-		    <div class="slide" data-anchor="slide1">
-		    	<img src="./images/CAT_9466.jpg" class="full-image"/>
+		<nav class="navbar navbar-fixed-top" role="navigation">
+	      	<div class="container-fluid">
+	        <!-- start collapsed navbar -->
+		    	<div class="navbar-header">
+			        <button 
+			         class="navbar-toggle collapsed" 
+			         data-toggle="collapse" 
+			         data-target="#main_navbar" 
+			         aria-expanded="false">
+		            <!-- Hamburg menu for collapsed navbar-->
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>  
+		          	</button>
+		        </div><!-- / collapse navbar-->
+	        
+		        <!-- start un-collapsed navbar -->
+		        <div class="collapse navbar-collapse"
+		          id="main_navbar">
+		          <ul class="nav navbar-nav" id="menu">
+		            <li id="reptiles-nav" data-menuanchor="1st"><a href="#1st" >Politicagraphy</a></li>
+		            <li id="mammals-nav" data-menuanchor="2nd"><a href="#2nd" >Island Stories</a></li>
+		            <li id="birds-nav" data-menuanchor="3rd"><a href="#3rd" >Trivial Indentities</a></li>
+		            <li id="birds-nav" data-menuanchor="fourth"><a href="#4th" >Unterwegs</a></li>
+		            <li id="birds-nav" data-menuanchor="five"><a href="#5th" >About</a></li>
+		          </ul>
+		        </div><!-- / collapse navbar-->
+	      	</div>
+	    </nav>
+
+		<div id="fullpage">
+		    <div class="section fp-auto-height active" id="section0">
+		    	<div class="slide" id="slide0">
+		    		<div class="central-white container">
+		    			<img class="gallery-photo" src="https://farm2.staticflickr.com/1594/24154403441_2d459b1c92_c.jpg" alt="Frozen garlics"/>
+		    		</div>
+		    	</div>
+		    	
+		    	<div class="slide" id="slide1">
+		    		<div class="central-white container">
+		    			<img class="gallery-photo" src="https://farm2.staticflickr.com/1581/24154385941_427a371531_c.jpg" alt="White gloves"/>
+		    		</div>
+		    	</div>
+		    	<div class="slide" id="slide2">
+		    		<div class="central-white container">
+		    			<img class="gallery-photo" src="https://farm2.staticflickr.com/1482/23941329890_1fe7662080_c.jpg" alt="Golden knife"/>
+		    		</div>
+		    	</div>
+		    	<div class="slide" id="slide3">
+		    		<div class="central-white container">
+		    			<img class="gallery-photo" src="https://farm2.staticflickr.com/1511/24210802986_eb7c5894a2_c.jpg" alt="Top hat"/>
+		    		</div>
+		    	</div>
+		    	<div class="slide" id="slide4">
+		    		<div class="central-white container">
+		    			<img class="gallery-photo" src="https://farm2.staticflickr.com/1444/23608652504_7a4168976c_c.jpg" alt="Panadol Allergy SINUS Caplets"/>
+		    		</div>
+		    	</div>
+		    </div><!-- / first section -->
+
+		    <div class="section" id="section1">
+		    	<div class="central-white container">
+		    		
+		    	</div>
 		    </div>
-	    	<div class="slide" data-anchor="slide2">
-		    	<img src="./images/CAT_9482.jpg" class="full-image"/>
+
+		    <div class="section" id="section2">
+		    	<div class="slide" id="slide0">
+		    		<div class="central-white container">
+		    			<img class="gallery-photo" src="https://farm9.staticflickr.com/8047/8405988256_905136913e_c.jpg" alt="99 cents"/>
+		    		</div>
+		    	</div>
+		    	
+		    	<div class="slide" id="slide1">
+		    		<div class="central-white container">
+		    			<img class="gallery-photo" src="https://farm9.staticflickr.com/8073/8407662697_4be828fe6a_c.jpg" alt="Stop"/>
+		    		</div>
+		    	</div>
+		    	<div class="slide" id="slide2">
+		    		<div class="central-white container">
+		    			<img class="gallery-photo" src="https://farm9.staticflickr.com/8365/8407663331_ae8eb3b269_c.jpg" alt="Mayor Lawrence"/>
+		    		</div>
+		    	</div>
+		    	<div class="slide" id="slide3">
+		    		<div class="central-white container">
+		    			<img class="gallery-photo" src="https://farm9.staticflickr.com/8377/8407663089_25a027d7fe_c.jpg" alt="Ensign"/>
+		    		</div>
+		    	</div>
+		    	<div class="slide" id="slide4">
+		    		<div class="central-white container">
+		    			<img class="gallery-photo" src="https://farm9.staticflickr.com/8237/8407668633_e3412696a8_c.jpg" alt="Truck"/>
+		    		</div>
+		    	</div>
 		    </div>
-	    </div>
-	</div>
+
+		    <div class="section" id="section3">
+			   <div class="central-white"></div>
+		    </div>
+
+		    <div class="section" id="section4">
+			   <div class="central-white"></div>
+		    </div>
+		</div>
+
 	</body>
 </html>
