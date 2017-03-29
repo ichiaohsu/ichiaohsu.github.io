@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link href="../css/main.css" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css"> -->
+        <link rel="stylesheet" href="../css/swiper.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	      	<div class="container-fluid">
+	        <!-- start collapsed navbar -->
+		    	<div class="navbar-header">
+			        <button type="button"
+			         class="navbar-toggle collapsed" 
+			         data-toggle="collapse" 
+			         data-target="#main_navbar" 
+			         aria-expanded="false">
+		            <!-- Hamburg menu for collapsed navbar-->
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>  
+		          	</button>
+		        </div><!-- / collapse navbar-->
+	        
+		        <!-- start un-collapsed navbar -->
+		        <div class="collapse navbar-collapse"
+		          id="main_navbar">
+		          <ul class="nav navbar-nav" id="menu">
+		            <li><a href="polinguistiks.html">Polinguistiks</a></li>
+		            <li><a href="foam.html" >foam</a></li>
+		            <li><a href="portraitcity.html" >Portrait City</a></li>
+		            <li><a href="unterwegs.html" >Unterwegs</a></li>
+		            <li><a href="about.html" >About</a></li>
+		          </ul>
+		        </div><!-- / collapse navbar-->
+	      	</div><!-- / div container-fluid -->
+	    </nav>
+
+        <!-- Slider main container -->
+        <div class="container-fluid" id="test-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">unterwegs 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <script>        
+            var mySwiper = new Swiper ('.swiper-container', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: false,
+
+                // Navigation arrows
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+            })        
+        </script>
+	</body>
+</html>

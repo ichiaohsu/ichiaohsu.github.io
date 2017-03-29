@@ -1,0 +1,24 @@
+{
+  "name": "ichiaohsu.github.io",
+  "version": "0.1.0",
+  "description": "My official website, a portfolio as a photographer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichiaohsu/ichiaohsu.github.io.git"
+  },
+  "author": "I-Chiao Hsu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ichiaohsu/ichiaohsu.github.io/issues"
+  },
+  "homepage": "https://github.com/ichiaohsu/ichiaohsu.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1",
+    "swiper": "^3.4.2"
+  }
+}
