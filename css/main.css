@@ -98,10 +98,15 @@ body {
 }
 
 #about-text {
-	height:94%;
+	height:88%;
 	width: 100%;
-	margin-top: 8%;
+	margin-top: 12%;
 	margin-left: 2%;
 	margin-right: 2%;
 	margin-bottom: auto
+}
+
+#about-text p {
+	width: 50%;
+	text-align: justify
 }
