@@ -2,6 +2,8 @@
 <html lang="en">
 	<head>
         <link href="../css/main.css" rel="stylesheet">
+        <link href="../css/font-awesome.css" rel="stylesheet">
+        <script src="../js/albums.js"></script>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -13,7 +15,14 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css"> -->
         <link rel="stylesheet" href="../css/swiper.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+
+        <script id="photo-template" type="text/x-handlebars-template">
+            {{#each photos}}
+            <div class="swiper-slide"><img class="photo" src={{src}}/></div>
+            {{/each}}
+        </script>
 	</head>
 
 	<body>
@@ -38,40 +47,56 @@
 		        <div class="collapse navbar-collapse"
 		          id="main_navbar">
 		          <ul class="nav navbar-nav" id="menu">
+                    <li><a href="portraitcity.html" >Portrait City</a></li>
 		            <li><a href="polinguistiks.html">Polinguistiks</a></li>
 		            <li><a href="foam.html" >foam</a></li>
-		            <li><a href="portraitcity.html" >Portrait City</a></li>
-		            <li><a href="unterwegs.html" >Unterwegs</a></li>
 		            <li><a href="about.html" >About</a></li>
 		          </ul>
+                  <div id="social-icons">
+                  <ul class="nav navbar-nav navbar-right social">
+                	<li><a href="https://www.facebook.com/ichiao.hsu"><i class="fa fa-lg fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/ichhsu"><i class="fa fa-lg fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="mailto:ichiao.hsu@gmail.com"><i class="fa fa-lg fa-envelope-o" aria-hidden="true"></i></a></li>
+                  </ul>
+                  </div>
 		        </div><!-- / collapse navbar-->
 	      	</div><!-- / div container-fluid -->
 	    </nav>
 
         <!-- Slider main container -->
-        <div class="container-fluid" id="test-swiper">
+        <div class="container-fluid" id="outer-swiper">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide"><img width=80% src="https://farm2.staticflickr.com/1594/24154403441_2d459b1c92_c.jpg"/></div>
+                    <!-- <div class="swiper-slide"><img src="https://farm2.staticflickr.com/1594/24154403441_2d459b1c92_c.jpg"/></div> 
                     <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 3</div> -->
                 </div>
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
         </div>
+
+        <script>
+            var source   = $("#photo-template").html();
+            var template = Handlebars.compile(source);
+            var photos = albums['Polinguistiks']
+            
+            $(".swiper-wrapper").html(template(photos))
+        </script>
+
         <script>        
             var mySwiper = new Swiper ('.swiper-container', {
                 // Optional parameters
                 direction: 'horizontal',
                 loop: false,
-
+                keyboardControl: true,
                 // Navigation arrows
                 nextButton: '.swiper-button-next',
                 prevButton: '.swiper-button-prev',
             })        
         </script>
+
 	</body>
 </html>
